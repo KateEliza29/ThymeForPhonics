@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="supporting-files/kate-css-api.css">
+    <!--<link rel="stylesheet" href="supporting-files/home/home.css">-->
+    <link id="pageStyle" rel="stylesheet" href="supporting-files/day-mode.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Thyme for Phonics</title>
+
+    <style type="text/css">
+/* General Stylings */
+    body {
+        font-family: 'Quicksand', sans-serif;
+        overflow-x: hidden;
+    }
+
+    .button {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: openDyslexic;
+        src: url('supporting-files/OpenDyslexic.otf');
+    }
+
+
+    /* Slider */
+    .carousel-container {
+        width: 830px;
+        height: 700px;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+   }
+
+    .carousel-slide {
+        display: flex;
+    }
+
+    .carousel-slide div {
+        padding: 10px;
+        transition: transform 0.4s ease-in-out;
+        transform: scale(0.7);
+        border-radius: 10px;
+    }
+
+    .carousel-slide img {
+        width: 790px;
+        height: 450px;
+        padding: 10px;
+        border-radius: 40px;
+    }
+
+    /* Arrows */
+    .arrow-icon {
+        position: absolute;
+        opacity: 0.5;
+        z-index: 1;
+        top: 50%;
+        font-size: 3rem;
+        padding: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .arrow-icon:hover {
+        opacity: 1;
+    }
+
+    .arrow-icon:active {
+        transform: scale(0.9);
+    }
+
+    #nextBtn {
+        right: 5%; 
+    }
+
+    #prevBtn {
+        left: 5%;
+    }
+
+    /* App Card Formatting */
+    #appSection {
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-card {
+        width: 35%;
+    }
+
+    .app-icon {
+        font-size: 10rem;
+    }
+
+    @media only screen and (max-width: 860px) {
+        .carousel-container {
+            width: 600px;
+            height: 500px;
+        }
+
+        .carousel-slide img {
+            width: 560px;
+            height: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 646px) {
+        .carousel-container {
+            width: 400px;
+            height: 400px;
+        }
+
+        .carousel-slide img {
+            width: 360px;
+            height: 200px;
+        }
+
+        .arrow-icon {
+            top: 60%;
+        }
+
+    }
+
+    </style>
+
+
+</head>
+<body>
+
+    <!--Customise Bar-->
+    <div id="customiseSidebar" class="sidebar"> 
+        <a href="javascript:void(0)" id="closebutton" onclick="closeNav()">&times;</a>
+        <h2>Customise</h2>
+        <button class="button-left" id="lightMode" onclick="swapStyleSheet('supporting-files/day-mode.css')">Day</button>
+        <button class="button-middle" id="eveningMode" onclick="swapStyleSheet('supporting-files/evening-mode.css')">Evening</button>
+        <button class="button-right" id="darkMode" onclick="swapStyleSheet('supporting-files/night-mode.css')">Night</button>
+        <br>
+        <button class="button-left" onclick="changeFontDys()">Open Dyslexic</button>
+        <button class="button-right" onclick="changeFontQui()">Quicksand</button>
+    </div>
+
+<div id="contentWrapper">
+    <!--Navigation Bar-->
+    <nav>
+        <div class="nav-link"><a href="home.html"><strong>Home</strong></a></div>
+        <div class="nav-link"><a href="dashboard.html">Dashboard</a></div>
+        <div class="nav-link"><a href="about-us.html">About</a></div>
+        <div><a href="home.html"><img class="header-image" src="supporting-files/dog.png" alt="Home!"></a></div>
+        <div class="dropdown-menu">
+            <div class="nav-link" id="resources"><a href="javascript:void(0)">Resources</a></div>
+            <div class="dropdown-contents">
+                <div class="nav-link"><a href="games.html">Games</a></div>
+                <div class="nav-link"><a href="printables.html">Printables</a></div>
+                <div class="nav-link"><a href="videos.html">Videos</a></div>
+                <div class="nav-link"><a href="sound-board.html">Sound Board</a></div>
+            </div>   
+        </div>
+        <div class="nav-link"><a href="contact.html">Contact</a></div>
+        <div class="nav-link"><a href="blog.html">Blog</a></div>
+    </nav>
+
+    <div class="flex-row" id="nav2">
+        <div class="nav-link"><a href="javascript:void(0)" id="openbutton" onclick="openNav()">☰ Customise</a></div>
+        <div class="flex-row">
+            <div><p>Welcome <span id="cookieEmail">User</span></p></div>
+            <button class="button-left" id="logIn" onclick = "window.location.href = 'log-in.html';">Log In</button>
+            <button class="button-right" id="signUp" onclick = "window.location.href = 'sign-up.html';">Sign Up</button>
+        </div>
+    </div>
+
+
+    <div class="carousel-container">
+        <i class="arrow-icon fas fa-arrow-circle-left" id="prevBtn"></i>
+        <div class="carousel-slide">
+            <div>
+                <h2>Super Fun Games!</h2>
+                <a href="games.html"><img src="supporting-files/home/children-computer.jpg"></a>
+                <p>A whole range of games, each playable with any phoneme.</p>
+            </div>
+            <div>
+                <h2>Virtual Phonics Lessons!</h2>
+                <a href="videos.html"><img src="supporting-files/home/fun-game.jpg"></a>
+                <p>Video lessons for every sound, across all phases.</p>
+            </div>
+            <div>
+                <h2>Dashboard for Parents</h2>
+                <a href="dashboard.html"><img src="supporting-files/home/dashboard.jpg"></a>
+                <p>Track your child's progress and discover their strengths.</p>
+            </div>
+            <div>
+                <h2>Resources for Schools</h2>
+                <a href="printables.html"><img src="supporting-files/home/teacher.jpg"></a>
+                <p>Download high quality phonics games and resources for use in phonics lessons and directed interventions.</p>
+            </div>
+            <div>
+                <h2>Cross-Platform Compatability </h2>
+                <img src="supporting-files/home/computer-tablet-phone.jpg">
+                <p>Play on your phone, on your tablet, or on your computer and never lose scores or progress.</p>
+            </div>
+        </div>
+        <i class="arrow-icon fas fa-arrow-circle-right" id="nextBtn"></i>
+    </div>
+
+
+
+
+
+<!--Slider
+    <section id="carouselSection">
+        <div class="slider">
+            <div class="slides">
+                <i class="arrow-icon fas fa-arrow-circle-left" id="arrowLeft"></i>
+                <div id="slide-1">
+                    <h2>Super Fun Games!</h2> <small>For free!</small>
+                    <img class="carousel-image" src="supporting-files/home/children-computer.jpg">
+                    <p>A whole range of games, each playable with any phoneme.</p>
+                </div>
+
+                <div id="slide-2">
+                    <h2>Virtual Phonics Lessons!</h2><small>For free!</small>
+                    <img class="carousel-image" src="supporting-files/home/fun-game.jpg"> 
+                    <p>Video lessons for every sound, across all phases.</p>
+                </div>
+                
+                <div id="slide-3">
+                    <h2>Dashboard for Parents</h2>
+                    <img class="carousel-image" src="supporting-files/home/dashboard.jpg">
+                    <p>Track your child's progress and discover their strengths.</p>
+                </div>
+
+                <div id="slide-4">
+                    <h2>Resources for Schools</h2>
+                    <img class="carousel-image" src="supporting-files/home/teacher.jpg">
+                    <p>Download high quality phonics games and resources for use in phonics lessons and directed interventions.</p>
+                </div>
+                
+                <div id="slide-5">
+                    <h2>Cross-Platform Compatability </h2>
+                    <img class="carousel-image" src="supporting-files/home/computer-tablet-phone.jpg">
+                    <p>Play on your phone, on your tablet, or on your computer and never lose scores or progress.</p>
+                </div>
+                <i class="arrow-icon fas fa-arrow-circle-right" id="arrowRight"></i>
+            </div>
+        </div>
+    </section> -->
+
+<!--App Details-->
+    <section class="flex-row" id="appSection">
+        <div class="info-card" id="androidCard">
+            <h2>Get the Android App</h2>
+            <a href="#"><i id="androidIcon" class="app-icon fab fa-android"></i></a>
+            <p>For best results on a mobile, download the app for free from the Google Play Store.</p>
+        </div>
+
+        <div class="info-card" id="iosCard">
+            <h2>Get the iOS App</h2>
+            <a href="#"><i id="iosIcon" class="app-icon fab fa-apple"></i></a>
+            <p>For best results on a mobile, download the app for free from the iOS App Store.</p>
+        </div>
+    </section>
+
+
+
+
+    <!--Footer -->
+
+    <footer>
+        <div id="footerLeft">
+            <div class="logo" id="redBeard"></div>
+        </div>
+        <div id="footerRight">  
+            <a href= "http://kateeliza.co.uk"><div class="logo" id="email"></div></a>
+            <a href= "kateeliza.co.uk"><div class="logo" id="twitter"></div></a>
+            <a href= "kateeliza.co.uk"><div class="logo" id="facebook"></div></a>
+            <a href= "kateeliza.co.uk"><div class="logo" id="youtube"></div></a>
+            <a href= "kateeliza.co.uk"><div class="logo" id="instagram"></div></a>
+        </div>  
+    </footer>
+</div>
+
+
+
+    <script>
+
+       /* function firstSlideSize() {
+            carouselImages[counter].style.transform ="scale(1)";
+        }*/
+
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide div');
+        const prevBtn = document.querySelector('prevBtn');
+        let counter = 0;
+        const size = carouselImages[0].clientWidth;
+        carouselImages[counter].style.transform = "scale(1)";
+
+
+
+        document.getElementById('nextBtn').onclick = function() {
+            if (counter >= carouselImages.length -1) return;
+            counter++;
+            console.log(counter);
+            carouselSlide.style.transform = 'translateX(' + (-size*counter)+'px)';
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            carouselImages[counter].style.transform = "scale(1)";
+            carouselImages[counter-1].style.transform = "scale(0.7)";
+            if (counter < carouselImages.length -1) {
+                carouselImages[counter+1].style.transform = "scale(0.7)";
+            }
+        }
+
+        document.getElementById('prevBtn').onclick = function() {
+            if (counter <= 0) return;
+            counter--;
+            console.log(counter);
+            carouselSlide.style.transform = 'translateX(' + (-size*counter)+'px)';
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            carouselImages[counter].style.transform = "scale(1)";
+            carouselImages[counter+1].style.transform = "scale(0.7)";
+            if (counter > 0) {
+                carouselImages[counter-1].style.transform = "scale(0.7)";
+            }
+        }
+
+       /* carouselSlide.addEventListener('transitionend', ()=> {
+            console.log(carouselImages[counter]);
+            if (carouselImages[counter].id === "lastClone") {
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length -2; 
+                carouselSlide.style.transform = 'translateX(' + (-size*counter)+'px)';
+            }
+            if (carouselImages[counter].id === "firstClone") {
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length -counter; 
+                carouselSlide.style.transform = 'translateX(' + (-size*counter)+'px)';
+            }
+        })*/
+
+
+        function openNav() {
+          document.getElementById("customiseSidebar").style.width = "250px";
+          document.getElementById("contentWrapper").style.marginLeft = "250px";
+          document.getElementById("arrowLeft").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("customiseSidebar").style.width = "0";
+          document.getElementById("contentWrapper").style.marginLeft= "0";
+          document.getElementById("arrowLeft").style.marginLeft = "0";
+        }
+
+        function swapStyleSheet(sheet){
+            document.getElementById('pageStyle').setAttribute('href', sheet);
+        }
+
+        function changeFontDys() {
+            document.body.style.fontFamily = 'OpenDyslexic';
+            let buttons = document.getElementsByTagName("button");
+            for (let i=0; i<buttons.length; i++) {
+                document.getElementsByTagName("button")[i].style.fontFamily = 'OpenDyslexic';
+            }
+        }
+
+        function changeFontQui() {
+            document.body.style.fontFamily = 'Quicksand';
+            let buttons = document.getElementsByTagName("button");
+            for (let i=0; i<buttons.length; i++) {
+                document.getElementsByTagName("button")[i].style.fontFamily = 'Quicksand';
+            }
+        }
+        </script>
+
+    
+</body>
+</html>
