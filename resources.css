@@ -1,0 +1,30 @@
+#resourcesWrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 450px 450px; 
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    box-shadow: 5px 5px 3px gray;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    max-width: 450px;
+}
+
+.card img {
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #resourcesWrapper {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 450px; 
+        max-width: 450px;
+    }
+}

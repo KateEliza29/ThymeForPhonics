@@ -1,0 +1,35 @@
+#formWrapper {
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    max-width: 450px;
+}
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.text {
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    padding: 5px;
+    transition: all ease-in-out 0.4s;
+}
+
+.long-text {
+    height: 100px;
+}
+
+.text:focus {
+    animation: forwards;
+    animation-name: inputFocus;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+    outline: none;
+    padding: 20px;
+}

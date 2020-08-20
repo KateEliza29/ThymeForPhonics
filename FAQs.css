@@ -1,0 +1,37 @@
+#FAQ {
+    margin: auto;
+    text-align: center;
+    max-width: 60vw;
+    margin-top: 50px;
+}
+
+.accordion {
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+}
+
+.panel {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+}
+
+#FAQ a {
+    color: #fe6a16;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#FAQ a:hover {
+    color: #ea3e03;
+}
+
+@media screen and (max-width: 900px) {
+    #FAQ {        
+        max-width: 90vw;
+    }
+}

@@ -1,0 +1,115 @@
+/* General */
+    body, 
+    .sidebar {
+        background: radial-gradient(white, rgb(202, 202, 202));
+    }
+
+    a {
+        color: black;
+    }
+
+    h2 {
+        text-shadow: 1px 1px 2px #ea3e03;
+    }
+
+
+/* Navigation Bar */
+    nav, 
+    footer {
+        background-color: white;
+    }
+
+    .nav-link:hover {
+        border-top: 2px gray solid;
+        border-bottom: 2px gray solid;
+    }
+
+/* Home Page */
+    /* Carousel */
+    .carousel-slide div {
+        background: radial-gradient(white, rgb(202, 202, 202));
+        box-shadow: 3px 3px 3px rgb(94, 94, 94); 
+    }
+
+    /* App Section */
+    .app-icon {
+        text-shadow: 3px 3px 3px rgb(94, 94, 94); 
+    }
+
+/* About Pagee */
+    #aboutInfo {
+        box-shadow: 5px 5px 3px gray;
+    }
+
+    #aboutKate {
+        box-shadow: -5px -5px 3px gray;
+    }
+
+    #aboutStu {
+        box-shadow: 5px 5px 3px gray;
+    }
+
+    .button {
+        background-color: white;
+    }
+
+
+/* Contact Page */
+    /* FAQ */
+    .accordion {
+        box-shadow: 0px 0px 5px rgb(73, 73, 73);
+    }
+
+/* Log In Sign Up */
+    @keyframes inputFocus {
+        0% {box-shadow: 0px 0px 0px black;}
+        50% {box-shadow: 0px 0px 20px black;}
+        100% {box-shadow: 0px 0px 10px black;}
+    }
+
+    #formWrapper {
+        box-shadow: 0px 0px 10px grey;
+    }
+
+/* Printables */
+    td { 
+        background: radial-gradient(white, rgb(202, 202, 202));
+        box-shadow: 3px 3px 3px rgb(94, 94, 94);
+    }
+
+    .btn-large {
+        box-shadow: 3px 3px 3px rgb(94, 94, 94); 
+    }
+
+    /* Sound Board */
+    .button-set button {
+        background-color: white; 
+        box-shadow: 0px 0px 10px grey;
+    }
+
+    #soundBoardWrapper button:hover {
+        background-color: rgb(228, 228, 228);
+    }
+
+
+/* Footer */
+
+    #email {
+        background-image: url("../images/email-black.svg");
+    }    
+
+    #twitter {
+        background-image: url("../images/twitter-black.svg");
+    }
+
+    #facebook {
+        background-image: url("../images/facebook-black.svg");
+    }
+
+    #youtube {
+        background-image: url("../images/youtube-black.svg");
+    }
+
+    #instagram {
+        background-image: url("../images/insta-black.svg");
+    }

@@ -1,0 +1,151 @@
+
+#aboutSection {
+    display: grid; 
+    grid-gap: 20px;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+    margin-top: 30px;
+    width: 70%;
+}
+
+.about {
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#aboutPic {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#aboutInfo {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: right;
+}
+
+#aboutKate {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: left;
+}
+
+#aboutKatePic {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#aboutStuPic {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#aboutStu {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    text-align: right;
+}
+
+.aboutImage {
+    align-self: center;
+    border-radius: 5px 5px 5px 5px;
+    display: flex;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.portrait {
+    max-height: 500px;
+}
+
+.landscape {
+    max-height: 400px;
+}
+
+.left-pic {
+    border-radius: 5px 0px 0px 5px;
+    transform: translate(0%, 10%);
+    transition: all 0.3s ease-in-out;
+}
+
+.right-pic {
+    border-radius: 0px 5px 5px 0px;
+    transform: translate(0%, -10%);
+    transition: all 0.3s ease-in-out;
+}
+
+#aboutKatePic:hover .left-pic {
+    transform: translate(0%, 0%);
+}
+
+#aboutKatePic:hover .right-pic {
+    transform: translate(0%, 0%);
+}
+
+#aboutStuPic:hover .left-pic {
+    transform: translate(0%, 0%);
+}
+
+#aboutStuPic:hover .right-pic {
+    transform: translate(0%, 0%);
+}
+
+#aboutPic:hover .left-pic {
+    transform: translate(0%, 0%);
+}
+
+#aboutPic:hover .right-pic {
+    transform: translate(0%, 0%);
+}
+
+
+@media screen and (max-width: 1284px) {
+    #aboutSection {
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 70%;
+    }
+
+    #aboutPic {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #aboutInfo {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: center;
+    }
+
+    #aboutKatePic {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    #aboutKate {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        text-align: center;
+    }
+
+    #aboutStuPic {
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+
+    #aboutStu {
+        grid-column: 2/3;
+        grid-row: 6/7;
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width: 716px) {
+    #aboutSection {
+        width: 100%;
+    }
+}

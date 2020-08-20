@@ -1,0 +1,16 @@
+.button-set button {
+    font-size: 1.1rem;
+    height: 40px;
+    margin: 5px; 
+    width: 100px;
+}
+
+#stackedSounds button {
+    background: linear-gradient(45deg, #fe6a16, #ea3e03);
+}
+
+.button-set {
+    margin-top: 40px;
+    max-width: 80vw;
+    margin: auto;
+}

@@ -1,0 +1,107 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Slider */
+.carousel-container {
+    width: 830px;
+    height: 700px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carousel-slide {
+    display: flex;
+}
+
+.carousel-slide div {
+    padding: 10px;
+    transition: transform 0.4s ease-in-out;
+    transform: scale(0.7);
+    border-radius: 10px;
+}
+
+.carousel-slide img {
+    width: 790px;
+    height: 450px;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+/* Arrows */
+.arrow-icon {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+    top: 50%;
+    font-size: 3rem;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow-icon:hover {
+    opacity: 1;
+}
+
+.arrow-icon:active {
+    transform: scale(0.9);
+}
+
+#nextBtn {
+    right: 5%; 
+}
+
+#prevBtn {
+    left: 5%;
+}
+
+/* App Card Formatting */
+#appSection {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.info-card {
+    width: 35%;
+    margin-bottom: 50px;
+}
+
+.app-icon {
+    font-size: 10rem;
+}
+
+@media only screen and (max-width: 860px) {
+    .carousel-container {
+        width: 600px;
+        height: 500px;
+    }
+
+    .carousel-slide img {
+        width: 560px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 646px) {
+    .carousel-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .carousel-slide img {
+        width: 360px;
+        height: 200px;
+    }
+
+    .arrow-icon {
+        top: 60%;
+    }
+
+    #appSection {
+        flex-direction: column;
+    }
+
+}
