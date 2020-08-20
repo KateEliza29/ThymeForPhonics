@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="include/css/thymeMaster.css">
     <link rel="stylesheet" href="include/css/day-mode.css">
     <link rel="shortcut icon" href="supporting-files/games/Build/TemplateData/favicon.ico">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <script src="supporting-files/games/Build/TemplateData/UnityProgress.js"></script>
     <script src="supporting-files/games/Build/Build/UnityLoader.js"></script>
     <script>

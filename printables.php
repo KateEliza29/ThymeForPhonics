@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="include/css/thymeMaster.css">
     <link id="pageStyle" rel="stylesheet" href="include/css/day-mode.css">
     <link rel="stylesheet" href="include/css/printables.css">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <title>Printables</title>
 </head>
 
