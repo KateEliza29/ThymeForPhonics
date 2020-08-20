@@ -14,20 +14,8 @@ var openNav = function() {
       document.getElementById('pageStyle').setAttribute('href', sheet);
   }
 
-  var changeFontDys = function() {
-      document.body.style.fontFamily = 'OpenDyslexic';
-      let buttons = document.getElementsByTagName("button");
-      for (let i=0; i<buttons.length; i++) {
-          document.getElementsByTagName("button")[i].style.fontFamily = 'OpenDyslexic';
-      }
-  }
-
-  var changeFontQui = function() {
-      document.body.style.fontFamily = 'Quicksand';
-      let buttons = document.getElementsByTagName("button");
-      for (let i=0; i<buttons.length; i++) {
-          document.getElementsByTagName("button")[i].style.fontFamily = 'Quicksand';
-      }
+  var changeFont = function(sheet){
+      document.getElementById("fontStyle").setAttribute("href", sheet);
   }
 
   document.getElementById("openButton").addEventListener("click", openNav);

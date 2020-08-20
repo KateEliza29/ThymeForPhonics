@@ -10,6 +10,7 @@
     <link id="pageStyle" rel="stylesheet" href="include/css/day-mode.css">
     <link rel="stylesheet" href="include/css/FAQs.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <title>FAQs</title>
 </head>
 
@@ -147,11 +148,13 @@
                 document.getElementById(answerId).style.display = "block";
                 document.getElementById(arrowId).classList.remove("fa-arrow-right")
                 document.getElementById(arrowId).classList.add("fa-arrow-down");
+                document.getElementById(questionId).style.background = "linear-gradient(45deg, #fe6a16, #ea3e03)";
             }
             else {
                 document.getElementById(answerId).style.display = "none";
                 document.getElementById(arrowId).classList.remove("fa-arrow-down")
                 document.getElementById(arrowId).classList.add("fa-arrow-right");
+                document.getElementById(questionId).style.background = "transparent";
             }
         }
         

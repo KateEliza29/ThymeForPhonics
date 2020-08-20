@@ -45,6 +45,7 @@ if (isset($_POST['submit'])) {
     <link id="pageStyle" rel="stylesheet" href="include/css/day-mode.css">
     <link rel="stylesheet" href="include/css/contactLogSign.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <title>Sign Up</title>
 </head>
 <body>
@@ -70,11 +71,11 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <form method="post">
-                        <label id="nameLabel">Name</label> <input class="text" id="nameInput" name="name" type="text">
-                        <label id=emailLabel>Email</label> <input class="text" id="emailInput" name="email" type="email">
-                        <label id="password1Label">Password</label> <input class="text" id="password1" name="password1" type="password"><br>
+                        <label class="contact-label" id="nameLabel">Name</label> <input class="text" id="nameInput" name="name" type="text">
+                        <label class="contact-label" id=emailLabel>Email</label> <input class="text" id="emailInput" name="email" type="email">
+                        <label class="contact-label" id="password1Label">Password</label> <input class="text" id="password1" name="password1" type="password"><br>
                         <i id="1" class="far fa-eye icon-class"></i><br>
-                        <label id="password2Label">Confirm Password</label> <input class="text" id="password2" name="password2" type="password"><br>
+                        <label class="contact-label" id="password2Label">Confirm Password</label> <input class="text" id="password2" name="password2" type="password"><br>
                         <i id="2" class="far fa-eye icon-class"></i><br>
                         <input id = "submitButton" type="submit" name="submit" class="button" value="Sign Up">
                 </form>

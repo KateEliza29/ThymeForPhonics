@@ -14,12 +14,12 @@
     /* 1 - Fonts */
         @font-face {
             font-family: openDyslexic;
-            src: url('include/fonts/OpenDyslexic.otf');
+            src: url('../fonts/OpenDyslexic.otf');
         }
 
         @font-face {
-            font-family: quicksand;
-            src: url('include/fonts/Quicksand-Light.otf');
+            font-family: quickSand;
+            src: url('../fonts/Quicksand-Regular.otf');
         }
 
 
@@ -41,8 +41,7 @@
         }
         
         h3 {
-            font-size: 2rem;
-            letter-spacing: 4px;
+            font-size: 1.5rem;
         }
 
         h4 {
@@ -67,6 +66,18 @@
             transition: 0.5s;
             min-height: 90vh;
         }
+
+        fieldset {
+            margin: 10px;
+        }
+
+        .form-option {
+            display: block;
+            padding: 5px;
+            margin: 5px;
+        }
+
+
 
     /* 3 - Customisation Side Menu */
         .sidebar {
@@ -273,5 +284,3 @@
         .grid {
             display: grid; 
         }
-
- 

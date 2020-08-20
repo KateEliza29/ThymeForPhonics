@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="include/css/contactLogSign.css">
     <link id="pageStyle" rel="stylesheet" href="include/css/day-mode.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <title>Log In</title>
 
 </head>
@@ -65,8 +66,8 @@
 				<h2>Log In</h2>
 			</div>
             <form method="post">
-                <label for="email">Email</label> <input class="text" name = "email" type = "email">
-                <label for="password">Password</label> <input class="text" id="password1" name = "password" type = "password"><br>
+                <label class="contact-label" for="email">Email</label> <input class="text" name = "email" type = "email">
+                <label class="contact-label" for="password">Password</label> <input class="text" id="password1" name = "password" type = "password"><br>
                 <i id="1" class="far fa-eye icon-class"></i><br>
                 <input id="submitButton" type="submit" class="button" name="submit" value="Log In">
             </form>

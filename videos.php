@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="include/css/thymeMaster.css">
     <link id="pageStyle" rel="stylesheet" href="include/css/day-mode.css">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <title>Videos</title>
 
 </head>

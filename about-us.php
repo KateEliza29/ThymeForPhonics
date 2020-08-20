@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="include/css/about-us.css">
     <link rel="stylesheet" href="include/css/thymeMaster.css">
     <link id="pageStyle" rel="stylesheet" href="include/css/day-mode.css">
+    <link id="fontStyle" rel="stylesheet" href="include/css/quicksand.css">
     <title>About Us</title>
 </head>
 <body>
