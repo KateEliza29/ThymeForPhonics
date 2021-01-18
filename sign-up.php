@@ -1,7 +1,7 @@
 <?php include("include/function/checkLogInScript.php");
     
 if (isset($_POST['submit'])) {
-    $link = mysqli_connect("shareddb-v.hosting.stackcp.net", "ThymeForPhonics-313437e8eb", "znd6kbsmo9", "ThymeForPhonics-313437e8eb");
+    $link = mysqli_connect();
     
     //Check if the user is already signed up.
     $query = "SELECT `email` from `Users` WHERE `email` = '".mysqli_real_escape_string($link, $_POST["email"])."'";
