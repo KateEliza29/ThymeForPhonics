@@ -1,7 +1,7 @@
 <?php include("include/function/checkLogInScript.php");
 
     if (array_key_exists("email", $_POST) and array_key_exists("password", $_POST)) {
-        $link = mysqli_connect("shareddb-v.hosting.stackcp.net", "ThymeForPhonics-313437e8eb", "znd6kbsmo9", "ThymeForPhonics-313437e8eb");
+        $link = mysqli_connect();
         $email = mysqli_real_escape_string($link, $_POST['email']);
         $password = $_POST['password'];
         
